@@ -1,0 +1,63 @@
+
+a. Project: College Library System
+
+b. Five User Stories:
+	1. As a student, I want to search for books by title or author, so that I can quickly find the book I need.
+	2. As a librarian, I want to add new books to the system, so that they are available for student access.
+	3. As a student, I want to check the availability of a book, so that I know if I can borrow it.
+	4. As a librarian, I want to track overdue books, so that I can send reminders to students.
+	5. As a student, I want to reserve a book online, so that I can collect it later without waiting.
+
+c. Acceptance Criteria:
+- Story 1: Search for books
+  - The search should allow partial matches for title or author.
+  - Results must show book title, author, and availability.
+  - The search should return results within 2 seconds.
+
+- Story 5: Reserve a book online
+  - A student can only reserve if the book is available.
+  - Once reserved, the book is held for 2 days.
+  - Reserved books cannot be borrowed by others during this period.
+
+
+2. Agile Estimation (15 mins)
+
+a. Story Point Estimates (Fibonacci series):
+1. Search for books – 3 points
+2. Add new books – 2 points
+3. Check availability – 2 points
+4. Track overdue books – 5 points
+5. Reserve a book online – 5 points
+
+b. Reasoning:
+- Searching and checking availability are simpler functions – lower points.
+- Adding books requires form validation.
+- Tracking overdue books and reservations involve more complex logic and notification handling.
+
+c. Refinement Suggestions:
+- "Track overdue books" can be split into:
+  - Detecting overdue
+  - Sending reminders
+- "Reserve a book online" could be split into:
+  - Reservation logic
+  - Notification system
+
+
+3. Agile Metrics and Reporting (15 mins)
+
+a. Burndown Chart:
+A Burndown Chart shows the remaining work versus time. It tracks the progress of a sprint and helps identify delays or roadblocks.
+
+b. Mock Burndown Chart (5-day sprint, total 17 points):
+
+| Day        | Planned Remaining Points | Actual Remaining Points |
+|------------|---------------------------|--------------------------|
+| Day 1      | 17                        | 17                       |
+| Day 2      | 13                        | 15                       |
+| Day 3      | 9                         | 11                       |
+| Day 4      | 5                         | 6                        |
+| Day 5      | 0                         | 0                        |
+
+c. Other Useful Agile Metrics:
+	1. Velocity – Average story points completed per sprint.
+	2. Lead Time – Time taken from task start to finish.

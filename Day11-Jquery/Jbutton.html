@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Button Click Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<h2>Change Text with jQuery</h2>
+
+<p id="myParagraph">This is the original text.</p>
+<button id="changeTextBtn">Change Text</button>
+
+<script>
+    
+    $(document).ready(function() {
+        $("#changeTextBtn").click(function() {
+            $("#myParagraph").text("The text has been changed!");
+        });
+    });
+</script>
+
+</body>
+</html>

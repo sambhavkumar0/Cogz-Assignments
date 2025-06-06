@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>To-Do List</title>
+</head>
+<body>
+
+  <h2>List</h2>
+
+  <input type="text" id="taskInput">
+  <button onclick="addTask()">Add Task</button>
+
+  <h3>Tasks:</h3>
+  <ul id="taskList"></ul>
+
+  <script>
+    const tasks = [];
+
+    
+    function addTask() {
+      const input = document.getElementById("taskInput");
+      const taskName = input.value.trim();
+
+      if (taskName === "") {
+        alert("Please enter a task.");
+        return;
+      }
+
+      tasks.push({ name: taskName, status: "pending" });
+      input.value = "";
+      displayTasks();
+    }
+
+    function completeTask(index) {
+      tasks[index].status = "completed";
+      displayTasks();
+    }
+
+    function displayTasks() {
+      const taskList = document.getElementById("taskList");
+      taskList.innerHTML = "";
+
+      tasks.forEach((task, index) => {
+        const li = document.createElement("li");
+        li.className = task.status === "completed" ? "completed" : "";
+
+        li.innerHTML = `
+          ${task.name}
+          ${task.status === "pending" 
+            ? `<button onclick="completeTask(${index})">Mark as Completed</button>` 
+            : `<span>Done.</span>`}
+        `;
+
+        taskList.appendChild(li);
+      });
+    }
+  </script>
+
+</body>
+</html>

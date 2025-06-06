@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array Min, Max & Sort</title>
+</head>
+<body>
+
+  <h2>Find Largest, Smallest and Sort Array</h2>
+
+  <label for="arrayInput">Enter numbers:</label><br>
+  <input type="text" id="arrayInput"><br>
+  <button onclick="proArray()">Process</button>
+
+  <div id="output"></div>
+
+  <script>
+    function findMinMax(arr) {
+      let min = arr[0];
+      let max = arr[0];
+
+      for (let i = 1; i < arr.length; i++) {
+        if (arr[i] < min) min = arr[i];
+        if (arr[i] > max) max = arr[i];
+      }
+
+      return { min, max };
+    }
+
+    function sortArray(arr) {
+      for (let i = 0; i < arr.length - 1; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+          if (arr[i] > arr[j]) {
+            // Swap
+            let temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+          }
+        }
+      }
+      return arr;
+    }
+
+    function proArray() {
+      const input = document.getElementById("arrayInput").value;
+      const output = document.getElementById("output");
+
+      if (!input.trim()) {
+        output.innerText = "Please enter some numbers.";
+        return;
+      }
+
+      let numArray = input.split(',').map(Number);
+      if (numArray.some(isNaN)) {
+        output.innerText = "Invalid input. Please enter only numbers separated by commas.";
+        return;
+      }
+
+      const { min, max } = findMinMax(numArray);
+      const sorted = sortArray([...numArray]);
+
+      output.innerText = 
+        `Original array: [${numArray.join(', ')}]
+Smallest number: ${min}
+Largest number: ${max}
+Sorted array: [${sorted.join(', ')}]`;
+    }
+  </script>
+
+</body>
+</html>

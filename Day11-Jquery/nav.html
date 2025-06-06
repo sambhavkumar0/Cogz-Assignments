@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Parent and Sibling Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .container {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<h2>jQuery DOM Navigation</h2>
+
+
+<div class="container" id="parentBox">
+    This is the parent <span id="mySpan">with a span inside</span>.
+</div>
+
+<p id="firstPara">This is the first paragraph.</p>
+<p>This is the next paragraph that should become bold.</p>
+
+<script>
+    $(document).ready(function() {
+    
+        $("#mySpan").parent().css("background-color", "#d1e7dd");
+
+      
+        $("#firstPara").next().css("font-weight", "bold");
+    });
+</script>
+
+</body>
+</html>

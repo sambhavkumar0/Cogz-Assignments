@@ -1,0 +1,21 @@
+a. List the 4 core values of the Agile Manifesto:
+
+	Individuals and interactions over processes and tools.
+
+	Working software over comprehensive documentation.
+
+	Customer collaboration over contract negotiation.
+
+	Responding to change over following a plan.
+
+b. Describe any 3 out of the 12 Agile principles in your own words:
+
+	Customer satisfaction by early delivery: Deliver valuable software early and often to keep the customer happy.
+
+	Welcome changes in requirements: Even late in development, changes are welcome to give the customer a competitive edge.
+
+	Simplicity: Focus on the essentials and eliminate unnecessary work.
+
+c. Reflect on a situation where traditional project management might fail and explain how Agile could help:
+
+	In traditional project management, a detailed plan is created at the start, and any changes later in the process are difficult and costly. For example, in developing a mobile app, changing user preferences or market conditions can make original requirements obsolete. Agile helps by allowing iterative development, continuous feedback, and quick pivots to meet evolving needs.

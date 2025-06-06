@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Factorial Calculator</title>
+</head>
+<body>
+
+  <h2>Factorial(Recursion)</h2>
+
+  <label for="numberInput">Enter a number:</label><br>
+  <input type="number" id="numberInput" min="0"><br>
+  <button onclick="calculateFactorial()">Calculate Factorial</button>
+
+  <div id="result"></div>
+
+  <script>
+    function factorial(n) {
+      if (n < 0) return "Not defined for negative numbers.";
+      if (n === 0 || n === 1) return 1;
+      return n * factorial(n - 1);
+    }
+
+    function calculateFactorial() {
+      const input = document.getElementById("numberInput").value;
+      const num = parseInt(input);
+
+      if (isNaN(num)) {
+        document.getElementById("result").innerText = "Please enter a valid number.";
+        return;
+      }
+
+      const result = factorial(num);
+      document.getElementById("result").innerText = `Factorial of ${num} is ${result}`;
+    }
+  </script>
+
+</body>
+</html>

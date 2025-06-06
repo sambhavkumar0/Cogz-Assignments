@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Button and Hover Effect</title>
+   
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<h2>jQuery Interaction Example</h2>
+
+<button id="alertButton">Click Me</button>
+
+<p id="hoverPara">Hover over this paragraph to change the text.</p>
+
+<script>
+    $(document).ready(function() {
+     
+        $("#alertButton").click(function() {
+            alert("Button was clicked!");
+        });
+
+       
+        $("#hoverPara").hover(
+            function() {
+                $(this).text("You are hovering over the paragraph!");
+            },
+            function() {
+                $(this).text("Hover over this paragraph to change the text.");
+            }
+        );
+    });
+</script>
+
+</body>
+</html>

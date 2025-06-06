@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic Meeting Scheduler</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    #participantsList {
+      margin-top: 20px;
+    }
+    li {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Meeting Participants</h2>
+
+  <input type="text" id="participantInput" placeholder="Enter participant name">
+  <button onclick="addParticipant()">Add Participant</button>
+
+  <ul id="participantsList"></ul>
+
+  <script>
+    let participants = [];
+
+    function addParticipant() {
+      const input = document.getElementById('participantInput');
+      const name = input.value.trim();
+
+      if (name !== '') {
+        participants.push(name);
+        input.value = '';
+        displayParticipants();
+      }
+    }
+
+    function displayParticipants() {
+      const list = document.getElementById('participantsList');
+      list.innerHTML = '';
+
+      participants.forEach((participant, index) => {
+        const li = document.createElement('li');
+        li.textContent = `${index + 1}. ${participant}`;
+        list.appendChild(li);
+      });
+    }
+  </script>
+
+</body>
+</html>

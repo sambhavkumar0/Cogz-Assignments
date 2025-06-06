@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Arithmetic Operations</title>
+</head>
+<body>
+  <h2>Calculator</h2>
+
+  <label>Enter First Number:</label>
+  <input type="number" id="num1"><br><br>
+
+  <label>Enter Second Number:</label>
+  <input type="number" id="num2"><br><br>
+
+  <button onclick="calculate()">Calculate</button>
+
+  <h3>Results:</h3>
+  <p id="addition"></p>
+  <p id="subtraction"></p>
+  <p id="multiplication"></p>
+  <p id="division"></p>
+  <p id="modulus"></p>
+
+  <script>
+    function calculate() {
+
+      var a = parseFloat(document.getElementById("num1").value);
+      var b = parseFloat(document.getElementById("num2").value);
+
+      document.getElementById("addition").textContent = "Addition: " + (a + b);
+      document.getElementById("subtraction").textContent = "Subtraction: " + (a - b);
+      document.getElementById("multiplication").textContent = "Multiplication: " + (a * b);
+      if (b !== 0) {
+        document.getElementById("division").textContent = "Division: " + (a / b);
+        document.getElementById("modulus").textContent = "Modulus: " + (a % b);
+      } else {
+        document.getElementById("division").textContent = "Division: Cannot divide by zero";
+        document.getElementById("modulus").textContent = "Modulus: Cannot divide by zero";
+      }
+    }
+  </script>
+</body>
+</html>

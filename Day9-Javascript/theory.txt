@@ -1,0 +1,15 @@
+Functions in Js :- reusable block of codes to perform specific tasks.
+    > Improves code efficiency
+    >reduce redundancy
+    >code easier to maintain
+
+..passing arguments to functions.
+
+>default arguments- preset values are provided to prevent undefined errors.
+
+function greet(name='guest'){
+    return "hello "+ name;
+    }
+
+
+Array :- data structure to store multiple values in single variable.    

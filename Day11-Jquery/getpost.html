@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery AJAX: Get and Post Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<h2>Activity 1: Fetch Data with $.get()</h2>
+<button id="fetchUser">Get Random User</button>
+<div id="userData" style="margin-top: 10px;"></div>
+
+<hr>
+
+<h2>Activity 2: Submit Data with $.post()</h2>
+<form id="nameForm">
+    <label for="name">Enter your name:</label>
+    <input type="text" id="nameInput" name="name" required>
+    <button type="submit">Submit</button>
+</form>
+<div id="responseMessage" style="margin-top: 10px;"></div>
+
+<script>
+    $(document).ready(function() {
+       
+        $("#fetchUser").click(function() {
+            $.get("https://randomuser.me/api/", function(data) {
+                const user = data.results[0];
+                const html = `
+                    <p><strong>Name:</strong> ${user.name.first} ${user.name.last}</p>
+                    <p><strong>Email:</strong> ${user.email}</p>
+                    <img src="${user.picture.medium}" alt="User Picture">
+                `;
+                $("#userData").html(html);
+            });
+        });
+
+     
+        $("#nameForm").submit(function(e) {
+            e.preventDefault(); 
+
+            const name = $("#nameInput").val();
+
+            $.post("https://jsonplaceholder.typicode.com/posts", { name: name }, function(response) {
+                $("#responseMessage").html(`<p>Data submitted! Server responded with ID: ${response.id}</p>`);
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

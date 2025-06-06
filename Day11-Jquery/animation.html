@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Effects Example</title>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #menu {
+            background-color: #f0f0f0;
+            padding: 10px;
+            width: 200px;
+            display: none; /* initially hidden */
+            border: 1px solid #ccc;
+        }
+        .menu-toggle {
+            margin-top: 20px;
+        }
+        img {
+            width: 200px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>jQuery Fade and Slide Effects</h2>
+
+
+<img id="myImage" src="https://via.placeholder.com/200" alt="Placeholder Image">
+<br>
+<button id="fadeButton">Fade Out Image</button>
+
+
+<div class="menu-toggle">
+    <button id="toggleMenu">Toggle Menu</button>
+</div>
+
+<div id="menu">
+    <ul>
+        <li>Home</li>
+        <li>Services</li>
+        <li>About</li>
+        <li>Contact</li>
+    </ul>
+</div>
+
+<script>
+    $(document).ready(function() {
+      
+        $("#fadeButton").click(function() {
+            $("#myImage").fadeOut();
+        });
+
+        
+        $("#toggleMenu").click(function() {
+            $("#menu").slideToggle();
+        });
+    });
+</script>
+
+</body>
+</html>

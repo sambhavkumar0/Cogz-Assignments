@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Form Validation</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .error { color: red; }
+        .success { color: green; }
+    </style>
+</head>
+<body>
+
+<h2>Form Validation with jQuery</h2>
+
+<form id="myForm">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name"><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="text" id="email" name="email"><br><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+<div id="message" style="margin-top: 15px;"></div>
+
+<script>
+    $(document).ready(function() {
+        $("#myForm").submit(function(event) {
+            event.preventDefault(); 
+
+            const name = $("#name").val().trim();
+            const email = $("#email").val().trim();
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            let errorMsg = "";
+
+         
+            if (name === "") {
+                errorMsg += "<p class='error'>Name is required.</p>";
+            }
+
+            
+            if (!emailPattern.test(email)) {
+                errorMsg += "<p class='error'>Enter a valid email address.</p>";
+            }
+
+            // Show message or proceed
+            if (errorMsg) {
+                $("#message").html(errorMsg);
+            } else {
+                $("#message").html("<p class='success'>Form submitted successfully!</p>");
+               
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

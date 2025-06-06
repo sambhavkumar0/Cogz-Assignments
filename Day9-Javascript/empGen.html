@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employee Profile Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      max-width: 500px;
+      margin: auto;
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    #output {
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Employee Profile Generator</h2>
+
+  <input type="text" id="empName">
+  <input type="text" id="jobTitle">
+  <button onclick="generateProfile()">Generate Profile</button>
+
+  <div id="output"></div>
+
+  <script>
+    function generateProfile() {
+      const name = document.getElementById("empName").value.trim();
+      let title = document.getElementById("jobTitle").value.trim();
+
+      if (name === "") {
+        alert("Please enter the employee's name.");
+        return;
+      }
+
+      if (title === "") {
+        title = "Junior Developer"; // default job title
+      }
+
+      const outputDiv = document.getElementById("output");
+      outputDiv.innerHTML = `
+        <strong>Employee Profile:</strong><br>
+        Name: ${name}<br>
+        Job Title: ${title}
+      `;
+    }
+  </script>
+
+</body>
+</html>

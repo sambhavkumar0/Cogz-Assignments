@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task Reminder</title>
+
+</head>
+<body>
+
+  <h2>Set Task Reminder</h2>
+
+  <input type="text" id="taskName" placeholder="Enter task name" />
+  <input type="number" id="deadline" placeholder="Time in seconds" />
+  <button onclick="setReminder()">Set Reminder</button>
+
+  <script>
+    function setReminder() {
+      const taskName = document.getElementById("taskName").value;
+      const deadline = parseInt(document.getElementById("deadline").value) * 1000;
+
+      if (!taskName || isNaN(deadline) || deadline <= 0) {
+        alert("Please enter a valid task and time in seconds.");
+        return;
+      }
+
+      alert(`⏳ Reminder set for "${taskName}" in ${deadline / 1000} seconds.`);
+
+      setTimeout(() => {
+        alert(`Time to: ${taskName}`);
+      }, deadline);
+    }
+  </script>
+
+</body>
+</html>

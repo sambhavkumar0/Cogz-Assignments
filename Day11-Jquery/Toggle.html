@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Hide, Show, and Toggle FAQ</title>
+  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .faq {
+            margin-top: 20px;
+        }
+        .question {
+            cursor: pointer;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .answer {
+            display: none;
+            margin-left: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<h2>jQuery Hide/Show & FAQ Toggle</h2>
+
+<p id="myParagraph">This is a paragraph that can be hidden or shown.</p>
+<button id="hideBtn">Hide Paragraph</button>
+<button id="showBtn">Show Paragraph</button>
+
+<div class="faq">
+    <div class="question">What is jQuery?</div>
+    <div class="answer">jQuery is a fast, small, and feature-rich JavaScript library.</div>
+
+    <div class="question">How do I include jQuery?</div>
+    <div class="answer">You can include it using a CDN like code.jquery.com.</div>
+
+    <div class="question">What is a jQuery selector?</div>
+    <div class="answer">A selector is used to select and manipulate HTML elements.</div>
+</div>
+
+<script>
+    $(document).ready(function() {
+    
+        $("#hideBtn").click(function() {
+            $("#myParagraph").hide();
+        });
+
+        $("#showBtn").click(function() {
+            $("#myParagraph").show();
+        });
+
+        $(".question").click(function() {
+            $(this).next(".answer").slideToggle();
+        });
+    });
+</script>
+
+</body>
+</html>
