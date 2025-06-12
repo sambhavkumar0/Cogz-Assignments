@@ -3,7 +3,7 @@ import java.util.*;
 public class CollectionsExample {
     public static void main(String[] args) {
 
-        List<Integer> numbers = Arrays.asList(23, 12, 45, 6, 9, 18, 30, 21, 8, 10);
+        List<Integer> numbers = Arrays.asList(17, 27, 39, 42, 12, 45, 6, 9, 18, 30, 21, 8, 10, 14, 1);
 
         System.out.println("Inserted Array: " + numbers);
         List<Integer> evenNumbers = new ArrayList<>();
