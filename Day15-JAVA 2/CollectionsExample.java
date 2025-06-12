@@ -23,8 +23,8 @@ public class CollectionsExample {
         employees.put(4, "Abcd");
 
         System.out.println("\nKey -> Value:");
-        for (Map.Entry<Integer, String> entry : employees.entrySet()) {
-            System.out.println(entry.getKey() + " -> " + entry.getValue());
+        for (Map.Entry<Integer, String> mappings : employees.entrySet()) {
+            System.out.println(mappings.getKey() + " -> " + mappings.getValue());
         }
     }
 }
