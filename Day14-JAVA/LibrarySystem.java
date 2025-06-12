@@ -16,7 +16,6 @@ class Book {
     }
 }
 
-// User class
 class User {
     int userId;
     String name;
@@ -36,9 +35,9 @@ class User {
     }
 }
 
-// Main system
 public class LibrarySystem {
     public static void main(String[] args) {
+
         Book b1 = new Book(1, "Java", "James Gosling");
         Book b2 = new Book(2, "Python", "Guido van Rossum");
 
@@ -48,7 +47,7 @@ public class LibrarySystem {
         b2.displayInfo();
 
         u1.borrowBook(b1);
-        u1.borrowBook(b1); // Trying to borrow again
+        u1.borrowBook(b1);
 
         b1.displayInfo();
     }
