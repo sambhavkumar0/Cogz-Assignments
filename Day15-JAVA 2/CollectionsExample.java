@@ -14,7 +14,7 @@ public class CollectionsExample {
         }
 
         Collections.sort(evenNumbers);
-        System.out.println("Sorted Even Numbers: " + evenNumbers);
+        System.out.println("Sorted list: " + evenNumbers);
 
         HashMap<Integer, String> employees = new HashMap<>();
         employees.put(1, "A");
@@ -22,7 +22,7 @@ public class CollectionsExample {
         employees.put(3, "Abc");
         employees.put(4, "Abcd");
 
-        System.out.println("\nEmployee ID -> Name:");
+        System.out.println("\nKey -> Value:");
         for (Map.Entry<Integer, String> entry : employees.entrySet()) {
             System.out.println(entry.getKey() + " -> " + entry.getValue());
         }
