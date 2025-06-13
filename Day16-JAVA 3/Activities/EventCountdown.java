@@ -16,8 +16,8 @@ public class EventCountdown {
                 System.out.println("That date is in the past!");
             } else {
                 Period period = Period.between(today, eventDate);
-                System.out.println("Your event is in " + period.getMonths() +
-                                   " months and " + period.getDays() + " days.");
+                System.out.println("Your event is in " + period.getYears() + " years " + period.getMonths() +
+                        " months and " + period.getDays() + " days.");
             }
         } catch (DateTimeParseException e) {
             System.out.println("Invalid date format.");
