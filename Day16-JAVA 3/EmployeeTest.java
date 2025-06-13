@@ -49,8 +49,8 @@ class PartTimeEmployee extends Employee {
 // Demo
 public class EmployeeTest {
     public static void main(String[] args) {
-        Employee e1 = new FullTimeEmployee("Alice", 101, 50000);
-        Employee e2 = new PartTimeEmployee("Bob", 102, 60, 200);
+        Employee e1 = new FullTimeEmployee("Sambhav", 101, 50000);
+        Employee e2 = new PartTimeEmployee("Not Sambhav", 102, 60, 200);
 
         e1.displayDetails();
         System.out.println("Salary: ₹" + e1.calculateSalary());
