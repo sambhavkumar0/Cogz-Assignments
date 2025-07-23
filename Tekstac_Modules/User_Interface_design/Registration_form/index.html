@@ -1,0 +1,74 @@
+<!--Do not change the code skeleton-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Chattooo</title>
+</head>
+<body>
+    <div id="header">
+        <h1 id="heading">Chatoo</h1>
+    </div>
+    <div id="para">
+       <br>With private messaging and calling, you can be yourself,<br> <span id="p2"> freely and feel close to the most important people in your life no matter where they are.</span>
+    </div>
+    <div class="login-container">
+        <form class="login-form">
+            <h1>Registration Form</h1>
+            <table>
+                <tr>
+                    <td>
+                        <label for="firstName">First Name:</label></td>
+                      <td>  <input type="text" id="firstName" name="firstName" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="lastName">Last Name:</label></td>
+                       <td> <input type="text" id="lastName" name="lastName" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="dob">Date of Birth:</label></td>
+                      <td>  <input type="date" id="dob" name="dob" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="phoneNumber">Phone Number:</label></td>
+                       <td> <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td >
+                        <label>Gender:</label></td>
+                      <td>  <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female" required>
+                        <label for="female">Female</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td >
+                        <label for="username">Username:</label></td>
+                       <td> <input type="text" id="username" name="username" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password">Password:</label></td>
+                        <td><input type="password" id="password" name="password" required>
+                    </td>
+                </tr>
+            </table>
+
+            <button type="submit" onclick="return registerUser();" id="submit">Register</button>
+        </form>
+    </div>
+    <div id="result"></div>
+</body>
+</html>
